@@ -7,7 +7,7 @@ PORT = 8888 # Arbitrary non-privileged port
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print ('Socket created')
  
-#Bind socket to local host and port
+# Bind socket to local host and port
 try:
     s.bind((HOST, PORT))
 except socket.error as msg:
@@ -16,14 +16,15 @@ except socket.error as msg:
      
 print ('Socket bind complete')
  
-#Start listening on socket
+# Start listening on socket
 s.listen(10)
 print ('Socket now listening')
  
-#now keep talking with the client
+# Now keep talking with the client
 while 1:
-    #wait to accept a connection - blocking call
+
+    # Wait to accept a connection - blocking call
     conn, addr = s.accept()
-    print ('Nuovo client connesso')
+    print ('New client connected')
      
 s.close()
