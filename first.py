@@ -12,4 +12,5 @@ c= a+b
 print(c)
 stringa = input()
 print(stringa)
+# Pause
 os.system("PAUSE")
